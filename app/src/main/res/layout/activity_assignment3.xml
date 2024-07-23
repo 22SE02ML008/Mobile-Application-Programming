@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registration Form"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="32dp"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spCountry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rgGender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        app:layout_constraintTop_toBottomOf="@id/spCountry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvAlreadyRegistered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already Registered? Login"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:clickable="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
